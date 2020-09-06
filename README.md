@@ -35,10 +35,6 @@ expo 공식 문서 : https://docs.expo.io/
 </p>
 <br>
 
-- 리스트1
-  - 리스트2
-   - 리스트3
-
 
 
 
