@@ -6,8 +6,6 @@
 ## 1. 개발환경 세팅 (공통사항)
 react-native와 Expo 둘 다 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다.
 
-
-
 설치파일 다운 : https://nodejs.org/ko/
 
 
