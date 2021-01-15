@@ -34,9 +34,11 @@ React-Native의 레이아웃 디자인은 웹(HTML 과 CSS)의 작동원리와 �
 ```shell
 npm -v
 ```
-​	만약 작동하지 않는다면, Node.js를 설치하지 않으셨거나 Node.js에 대한 환경변수가 등록되지 않은 것 입니다.  
-​	작동 안한다면 재설치 해보시고 그래도 안되시면 구글에 각 운영체제에 맞는 검색어로 찾아보시면 될 것 같습니다.    
-​	ex. "윈도우 npm 환경변수", "macOS npm 환경변수"
+// 들여쓰기 되도록 고쳐야할 듯	
+
+만약 작동하지 않는다면, Node.js를 설치하지 않으셨거나 Node.js에 대한 환경변수가 등록되지 않은 것 입니다.  
+	작동 안한다면 재설치 해보시고 그래도 안되시면 구글에 각 운영체제에 맞는 검색어로 찾아보시면 될 것 같습니다.    
+	ex. "윈도우 npm 환경변수", "macOS npm 환경변수"
 
 ​	앞으로 macOS 관련하여 권한 문제가 발생할 경우, macOS 환경설정의 보안 및 개인 정보 보호로 가셔서, 전체 디스크 접근 권한 등의 탭에서 오류와 관련된 프로그램 (ex. watchman)의 권한에 체크를 해주시면 됩니다.  
 구글에 관련 오류를 검색하셔서, 시도해보시는 것도 좋습니다.
@@ -194,6 +196,60 @@ openURL(webUrl);
   
 
 * ##### app.json.
+
+  app.json은 앱에 대한 정보들을 담은 파일입니다.
+
+  ```json
+  {
+    "expo": {
+      "name": "앱 이름",
+      "slug": "expo에서 ",
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ],
+      "version": "1.0.4",
+      "orientation": "portrait",
+      "icon": "./assets/autoguy_icon.png",
+      "splash": {
+        "image": "./assets/autoguy_splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#FFF100"
+      },
+      "updates": {
+        "fallbackToCacheTimeout": 0
+      },
+      "assetBundlePatterns": [
+        "assets/*"
+      ],
+      "ios": {
+        "bundleIdentifier": "com.iweb.autoguy",
+        "supportsTablet": true,
+        "buildNumber": "1.0.4",
+        "infoPlist": {
+          "NSLocationWhenInUseUsageDescription": "위치 정보 사용 권한을 허용하면 내 주변 자동차 용품 장착점 가격정보를 확인 알 수 있어요.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "위치 정보 사용 권한을 허용하면 내 주변 자동차 용품 장착점 가격정보를 확인 알 수 있어요.",
+          "NSCameraUsageDescription": "제품 사진을 등록하려면 카메라 접근 권한 허용이 필요해요.",
+          "NSPhotoLibraryUsageDescription": "제품 사진을 등록하려면 앨범 접근 권한 허용이 필요해요."
+        }
+      },
+      "android": {
+        "package": "com.iweb.autoguy",
+        "versionCode": 7,
+        "googleServicesFile": "./google-services.json",
+        "useNextNotificationsApi": true,
+        "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "ACCESS_NETWORK_STATE", "ACCESS_WIFI_STATE", "CAMERA", "FOREGROUND_SERVICE", "INTERNET", "MANAGE_DOCUMENTS", "MODIFY_AUDIO_SETTINGS", "READ_APP_BADGE", "READ_CALENDAR", "READ_CONTACTS", "READ_EXTERNAL_STORAGE", "READ_INTERNAL_STORAGE", "READ_PHONE_STATE", "RECEIVE_BOOT_COMPLETED", "RECORD_AUDIO", "REQUEST_INSTALL_PACKAGES", "STORAGE", "SYSTEM_ALERT_WINDOW", "USE_BIOMETRIC", "USE_FINGERPRINT", "VIBRATE", "WAKE_LOCK", "WRITE_CALENDAR", "WRITE_EXTERNAL_STORAGE", "WRITE_SETTINGS"]
+      },
+      "notification": {
+        "icon": "./assets/autoguy_icon.png",
+        "color": "#FFFFFF",
+        "iosDisplayInForeground": true
+      }
+    }
+  }
+  
+  ```
 
   
 
