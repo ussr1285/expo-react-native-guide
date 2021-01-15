@@ -14,11 +14,15 @@ react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일�
 
 * **프로그램 다운**
 프로그램 이름 | 설치파일 다운 받는 곳
---- | ---
+------------ | -------------
 Node.js 설치파일 다운 | https://nodejs.org/ko/
 Visual Studio Code 설치파일 다운 | https://code.visualstudio.com/
 
 
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 
 
