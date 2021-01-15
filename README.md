@@ -1,18 +1,10 @@
----
-
-title: Expo(리액트 네이티브) 가이드 
-date: 2021년 1월 15일 ~ 2021년 1월 15일
-작성자: 조민재 (https://github.com/ussr1285)
-
----
-
-
+# Expo(리액트 네이티브) 가이드
 
 ## Expo와 React-Native의 특징
 
-##### ㅇ우
+#### 임시
 
-##### 레이아웃 디자인
+#### 레이아웃 디자인
 
 ```react
 import * as React from 'react';
@@ -194,11 +186,13 @@ openURL(webUrl);
 
 * ##### App.js
 
-  워크플로우
+  워크플로우 설명 ex. Dismount
 
   
 
 * ##### app.json.
+
+  
 
   아이콘 및 스플래시 이미지
 
@@ -206,10 +200,18 @@ openURL(webUrl);
 
 * ##### 푸시(알림)
 
-  
+  ### (공통사항)
 
   
 
+  
+  
+  ### ( Android )
+  
+  
+  
+  ### ( iOS )
+  
   
 
 ## 3. Expo앱 기능들 (모듈)
