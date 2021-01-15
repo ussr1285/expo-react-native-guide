@@ -5,19 +5,19 @@
 
 
 
-## 1. 개발환경 세팅 (공통사항)
+## 1. 개발환경 세팅
 * **Node.js**
-react-native와 Expo 둘 다 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다.  
-[Node.js 설치](https://nodejs.org/ko/)
+react-native는 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다.  [Node.js 설치하기](https://nodejs.org/ko/)  
+제대로 설치 되었고, 환경변수까지 적용된 것을 확인하려면 터미널에서 ```npm -v```를 쳐서 버전이 제대로 나오는지 확인하시면 됩니다.
+
 
 * **Visual Studio Code**  
-react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일반적이고 효율적이므로 이것으로 사용해주시기 바랍니다. (참고로 MIT 라이센스)  
+react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일반적이고 효율적이므로 이것으로 사용해주시기 바랍니다. 참고로 MIT 라이센스이므로 걱정없이 사용하셔도 됩니다. [Visual Studio Code 설치하기](https://code.visualstudio.com/)
 
-* **프로그램 다운**
-프로그램 이름 | 설치파일 다운 받는 곳
------------- | -------------
-Node.js 설치 | https://nodejs.org/ko/
-Visual Studio Code 설치 | https://code.visualstudio.com/
+
+
+
+
 
 
 ## 2. Expo 개발 가이드
