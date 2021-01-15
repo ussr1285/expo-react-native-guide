@@ -30,12 +30,26 @@ React-Native의 레이아웃 디자인은 웹(HTML 과 CSS)의 작동원리와 �
 
 
 
+---
+
+글에서 나오는 모든 코드의 "..." 은 생략이라는 뜻입니다.
+
+```javascript
+... // 생략이라는 의미
+```
+
+
+
+---
+
+
+
 ## 1. 개발환경 세팅
 
 * #### Node.js
 
   react-native는 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다. [Node.js 설치하기](https://nodejs.org/ko/)  
-  제대로 설치 되어 환경변수까지 적용된 것을 확인하려면 터미널(윈도우는 cmd)에서 아래 명렁어를 쳐서 버전이 제대로 나오는지 확인하시면 됩니다.   
+  제대로 설치 되어 환경변수까지 적용된 것을 확인하려면 터미널(윈도우는 cmd)에서 아래 명렁어를 쳐서 버전이 제대로 나오는지 확인하시면 됩니다.  
 
 ```shell
 npm -v
@@ -45,6 +59,8 @@ npm -v
 만약 작동하지 않는다면, Node.js를 설치하지 않으셨거나 Node.js에 대한 환경변수가 등록되지 않은 것 입니다.  
 	작동 안한다면 재설치 해보시고 그래도 안되시면 구글에 각 운영체제에 맞는 검색어로 찾아보시면 될 것 같습니다.    
 	ex. "윈도우 npm 환경변수", "macOS npm 환경변수"
+
+![사진](./macOS_permission.)
 
 ​	앞으로 macOS 관련하여 권한 문제가 발생할 경우, macOS 환경설정의 보안 및 개인 정보 보호로 가셔서, 전체 디스크 접근 권한 등의 탭에서 오류와 관련된 프로그램 (ex. watchman)의 권한에 체크를 해주시면 됩니다.  
 구글에 관련 오류를 검색하셔서, 시도해보시는 것도 좋습니다.
@@ -147,7 +163,7 @@ yarn install
 ```react
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, Vibration, BackHandler } from 'react-native';
-import { WebView } from 'react-native-webview'
+import { WebView } from 'react-native-webview';
 import * as Notifications from 'expo-notifications';
 import * as Location from 'expo-location';
 ...
@@ -164,7 +180,7 @@ expo install expo-location
 
 터미널을 이용해 프로젝트 폴더로 가셔서 명령어로 "expo install [설치할 패키지 이름]"을 쳐서, 패키지를 설치할 수 있습니다.    
 
-이렇게 설치된 패키지는 아래 코드처럼 작성하여 사용할 수 있습니다.
+이렇게 설치된 패키지는 아래 코드처럼 작성하여 사용할 수 있습니다.  
 
 ```react
 import * as Location from 'expo-location' // expo-location 패키지를 Location 이란 이름으로 사용.
@@ -185,8 +201,6 @@ openURL(webUrl);
 
 ```
 
-
-
 [참고한 문서](https://docs.expo.io/workflow/using-libraries/)
 
 
@@ -203,7 +217,7 @@ openURL(webUrl);
 
 * ##### app.json.
 
-  app.json은 앱에 대한 정보들을 담은 파일입니다.
+  app.json은 앱에 대한 정보들을 담은 파일입니다. 
 
   ```json
   {
