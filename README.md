@@ -2,7 +2,13 @@
 
 ## Expo와 React-Native의 특징
 
-#### 임시
+#### Android와 iOS, Web에서 모두 사용 가능.
+
+
+
+#### 플레이스토어나 앱스토어를 통하지 않고 업데이트 가능 (개인적으로 권장하지 않음)
+
+아래 빌드에 대한 챕터에서 [release-channel](#4-expo-빌드-및-스토어에-배포하는법) 기능을 소개할 것입니다.
 
 #### 레이아웃 디자인
 
@@ -203,17 +209,17 @@ openURL(webUrl);
   {
     "expo": {
       "name": "앱 이름",
-      "slug": "expo에서 ",
+      "slug": "expo에서 사용할 프로젝트 명",
       "platforms": [
         "ios",
         "android",
         "web"
       ],
-      "version": "1.0.4",
+      "version": "expo에서 표시할 앱의 버전",
       "orientation": "portrait",
-      "icon": "./assets/autoguy_icon.png",
+      "icon": "./assets/아이콘으로 쓸 사진.png",
       "splash": {
-        "image": "./assets/autoguy_splash.png",
+        "image": "./assets/스플래시 이미지로 쓸 사진.png",
         "resizeMode": "contain",
         "backgroundColor": "#FFF100"
       },
@@ -226,23 +232,20 @@ openURL(webUrl);
       "ios": {
         "bundleIdentifier": "com.iweb.autoguy",
         "supportsTablet": true,
-        "buildNumber": "1.0.4",
+        "buildNumber": "ios에서의 앱 버전",
         "infoPlist": {
-          "NSLocationWhenInUseUsageDescription": "위치 정보 사용 권한을 허용하면 내 주변 자동차 용품 장착점 가격정보를 확인 알 수 있어요.",
-          "NSLocationAlwaysAndWhenInUseUsageDescription": "위치 정보 사용 권한을 허용하면 내 주변 자동차 용품 장착점 가격정보를 확인 알 수 있어요.",
-          "NSCameraUsageDescription": "제품 사진을 등록하려면 카메라 접근 권한 허용이 필요해요.",
-          "NSPhotoLibraryUsageDescription": "제품 사진을 등록하려면 앨범 접근 권한 허용이 필요해요."
+          ...
         }
       },
       "android": {
         "package": "com.iweb.autoguy",
-        "versionCode": 7,
+        "versionCode": 1,
         "googleServicesFile": "./google-services.json",
         "useNextNotificationsApi": true,
-        "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "ACCESS_NETWORK_STATE", "ACCESS_WIFI_STATE", "CAMERA", "FOREGROUND_SERVICE", "INTERNET", "MANAGE_DOCUMENTS", "MODIFY_AUDIO_SETTINGS", "READ_APP_BADGE", "READ_CALENDAR", "READ_CONTACTS", "READ_EXTERNAL_STORAGE", "READ_INTERNAL_STORAGE", "READ_PHONE_STATE", "RECEIVE_BOOT_COMPLETED", "RECORD_AUDIO", "REQUEST_INSTALL_PACKAGES", "STORAGE", "SYSTEM_ALERT_WINDOW", "USE_BIOMETRIC", "USE_FINGERPRINT", "VIBRATE", "WAKE_LOCK", "WRITE_CALENDAR", "WRITE_EXTERNAL_STORAGE", "WRITE_SETTINGS"]
+        "permissions": [...]
       },
       "notification": {
-        "icon": "./assets/autoguy_icon.png",
+        "icon": "./assets/앱에 알림왔을때 띄어줄 앱의 아이콘",
         "color": "#FFFFFF",
         "iosDisplayInForeground": true
       }
@@ -283,9 +286,24 @@ openURL(webUrl);
 
 ## 4. Expo 빌드 및 스토어에 배포하는법
 
+### Android (안드로이드)
+
+```sh
+expo build:android --release-channel play-store
+```
 
 
 
+--release-channel은 
+
+### iOS (아이폰)
+
+```shell
+sudo expo build:ios --release-channel app-store
+```
+
+ios를 빌드할때는 sudo를 사용하여 관리자 권한으로 접근하여야 합니다.  
+--release-channel은 
 
 
 
