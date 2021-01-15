@@ -26,9 +26,11 @@ React-Native의 레이아웃 디자인은 웹(HTML 과 CSS)의 작동원리와 �
 
 ## 1. 개발환경 세팅
 
-* **Node.js**  
-react-native는 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다. [Node.js 설치하기](https://nodejs.org/ko/)  
-제대로 설치 되어 환경변수까지 적용된 것을 확인하려면 터미널(윈도우는 cmd)에서 아래 명렁어를 쳐서 버전이 제대로 나오는지 확인하시면 됩니다.   
+* #### Node.js
+
+  react-native는 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다. [Node.js 설치하기](https://nodejs.org/ko/)  
+  제대로 설치 되어 환경변수까지 적용된 것을 확인하려면 터미널(윈도우는 cmd)에서 아래 명렁어를 쳐서 버전이 제대로 나오는지 확인하시면 됩니다.   
+
 ```shell
 npm -v
 ```
@@ -39,11 +41,12 @@ npm -v
 ​	앞으로 macOS 관련하여 권한 문제가 발생할 경우, macOS 환경설정의 보안 및 개인 정보 보호로 가셔서, 전체 디스크 접근 권한 등의 탭에서 오류와 관련된 프로그램 (ex. watchman)의 권한에 체크를 해주시면 됩니다.  
 구글에 관련 오류를 검색하셔서, 시도해보시는 것도 좋습니다.
 
+* #### Visual Studio Code
 
-* **Visual Studio Code**  
-react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일반적이고 효율적이므로 이것으로 사용해주시기 바랍니다. 참고로 MIT 라이센스이므로 걱정없이 사용하셔도 됩니다. [Visual Studio Code 설치하기](https://code.visualstudio.com/)
+  react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일반적이고 효율적이므로 이것으로 사용해주시기 바랍니다. 참고로 MIT 라이센스이므로 걱정없이 사용하셔도 됩니다. [Visual Studio Code 설치하기](https://code.visualstudio.com/)
 
-* **Expo 설치** 
+
+* #### Expo 설치
 
   기본적인 환경은 전부 갖춰져 있으니, 앞으로 [Expo 공식문서](https://docs.expo.io/)를 참고하여 환경을 세팅하시고 개발을 진행하시면 됩니다.  
   아래 명령어로 npm을 사용해 expo 를 설치해주시면 됩니다.
@@ -63,7 +66,7 @@ react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일�
 
   
 
-  * **Expo 로그인**
+  - #### Expo 로그인
 
   빌드를 위해서는 expo에 로그인 해야 합니다.  
   빌드 뿐만 아니라 편의를 위해 아래 명령어로 expo에 미리 로그인 해두는 것을 권장합니다.
