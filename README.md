@@ -150,7 +150,7 @@ npm install
 
 ## 6. 기타
 
-1. **Git & GitHub 활용**
+1. ##### Git & GitHub 활용
 
    [GitHub Desktop](https://desktop.github.com/) 을 활용해서 버전관리 및 백업하며 개발하시는 것을 추천합니다.
    버전 관리, 협업, 백업, 공유 등을 할때 유용합니다. 
@@ -166,7 +166,7 @@ npm install
 
    
 
-2. **깃허브 마크다운 문서 작성 방법 참고**
+2. ##### 깃허브 마크다운 문서 작성 방법 참고
    (한글) https://gist.github.com/ihoneymon/652be052a0727ad59601  
    (영문) https://guides.github.com/features/mastering-markdown/  
    **typora** 란 프로그램 사용하셔서 마크다운 수정하시면 편합니다.  (이 프로그램 사용할시 띄어쓰기는 shift + Enter)
