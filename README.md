@@ -116,7 +116,9 @@ npm install
 
 
 
-#### 프로젝트내 각 파일들에 대한 설명
+
+
+#### Expo의 각 파일들에 대한 설명
 
 * ##### app.json
 
@@ -150,10 +152,11 @@ npm install
 
 1. **Git & GitHub 활용**
 
-   [GitHub Desktop](https://desktop.github.com/) 을 활용해서 버전관리 및 백업하며 개발하시는 것을 추천합니다. 
+   [GitHub Desktop](https://desktop.github.com/) 을 활용해서 버전관리 및 백업하며 개발하시는 것을 추천합니다.
+   버전 관리, 협업, 백업, 공유 등을 할때 유용합니다. 
    기능 전부를 활용할 필요는 없고, commit과 push만 활용해도 좋을 것 같습니다.
 
-   [GitHub Desktop 및 Git의 원리 및 개념 강의](https://drive.google.com/drive/folders/1pWc9rQtgLMfXFfIPiscqs8bqubTHii_2?usp=sharing)
+   [GitHub Desktop 및 Git의 원리 및 개념 강의](https://drive.google.com/drive/folders/1pWc9rQtgLMfXFfIPiscqs8bqubTHii_2?usp=sharing) 를 참고하여 알아보시는 것 추천합니다.
 
    그리고 보안을 위해 회사 웬만하면 public 말고, private으로 해두시길 권장합니다.
 
