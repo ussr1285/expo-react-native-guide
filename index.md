@@ -1,7 +1,12 @@
-# Expo(리액트 네이티브) 가이드
+---
 
-2021년 1월 15일 ~ 2021년 1월 15일
+title: Expo(리액트 네이티브) 가이드 
+date: 2021년 1월 15일 ~ 2021년 1월 15일
 작성자: 조민재 (https://github.com/ussr1285)
+
+---
+
+
 
 ## Expo와 React-Native의 특징
 
@@ -148,13 +153,35 @@ import * as Location from 'expo-location';
 App.js 등 리액트 네이티브 코드가 담긴 파일을 보면 보통 맨 위에 Java에서의 앱개발 처럼, 이런 식으로 되어 있습니다. from 뒤에 있는 "expo-notification", "expo-location" 등이 패키지입니다.
 
 "react"와 "react-native"를 제외하고는, 보통 따로 설치하셔야 사용하실 수 있습니다.   
-예시로 "expo-location" 패키지를 설치 및 적용해보겠습니다.
+예시로 "expo-location" 등의 패키지를 설치 및 적용해보겠습니다.
 
 ```shell
 expo install expo-location
 ```
 
-터미널을 이용해 프로젝트 폴더로 가셔서 명령어로 "expo install [설치할 패키지 이름]"을 쳐서, 패키지를 설치할 수 있습니다.  
+터미널을 이용해 프로젝트 폴더로 가셔서 명령어로 "expo install [설치할 패키지 이름]"을 쳐서, 패키지를 설치할 수 있습니다.    
+
+이렇게 설치된 패키지는 아래 코드처럼 작성하여 사용할 수 있습니다.
+
+```react
+import * as Location from 'expo-location' // expo-location 패키지를 Location 이란 이름으로 사용.
+import { openURL } from 'expo-linking'; // expo-linking 패키지에서 openURL 기능만 사용.
+
+...
+// Location이라고 이름 붙인 expo-location 패키지에서 getCurrentPositionAsync 함수를 사용.
+await Location.getCurrentPositionAsync(
+  			{
+          accuracy: Location.Accuracy.BestForNavigation,
+          maximumAge: 1000,
+          timeout: 5000
+        }
+      );
+...
+// expo-linking 패키지에서 openUrl 함수를 사용.
+openURL(webUrl);
+
+```
+
 
 
 [참고한 문서](https://docs.expo.io/workflow/using-libraries/)
@@ -171,15 +198,17 @@ expo install expo-location
 
   
 
-* ##### app.json
+* ##### app.json.
 
   아이콘 및 스플래시 이미지
 
   
 
+* ##### 푸시(알림)
+
   
 
-  #### 푸시(알림)
+  
 
   
 
@@ -187,7 +216,7 @@ expo install expo-location
 
 문서가 길어질 것 같아 모듈은 따로 분리해놓았습니다.
 
-[Expo앱 모듈]() 새로 만들어야 함.
+( [Expo앱 모듈](./module.md) 새로 만들어야 함. )
 
 
 
