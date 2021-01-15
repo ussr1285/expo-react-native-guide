@@ -6,17 +6,18 @@
 
 
 ## 1. 개발환경 세팅 (공통사항)
-* Node.js
+* **Node.js**
 react-native와 Expo 둘 다 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다. 
-
-Node.js 설치파일 다운 : https://nodejs.org/ko/
-
 
 * **Visual Studio Code**  
 react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일반적이고 효율적이므로 이것으로 사용해주시기 바랍니다. (참고로 MIT 라이센스)  
 
+* **프로그램 다운**
+프로그램 이름 | 설치파일 다운 받는 곳
+___|___
+Node.js 설치파일 다운 | https://nodejs.org/ko/
+Visual Studio Code 설치파일 다운 | https://code.visualstudio.com/
 
-Visual Studio Code 설치파일 다운 : https://code.visualstudio.com/
 
 
 
