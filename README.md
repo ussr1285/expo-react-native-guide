@@ -1,16 +1,12 @@
 # Expo(리액트 네이티브) 가이드
 
-## Expo와 React-Native의 특징
+## Expo(React-Native)의 특징
 
-#### Android와 iOS, Web에서 모두 사용 가능.
+- Android와 iOS에서 모두 사용 가능합니다. (Web에서 빌드할 수 도 있습니다.)
 
+- 플레이스토어나 앱스토어를 통하지 않고 업데이트 가능합니다. 하지만 개인적으로 권장하지 않습니다. - 왜냐하면 스토어에서 앱 설치를한 신규 사용자에게도 업데이트를 필요로 하기 때문입니다.  (아래 [빌드에 대한 챕터]((#4-expo-빌드-및-스토어에-배포하는법))에서 release-channel 기능을 소개할 것입니다.)
 
-
-#### 플레이스토어나 앱스토어를 통하지 않고 업데이트 가능 (개인적으로 권장하지 않음)
-
-아래 빌드에 대한 챕터에서 [release-channel](#4-expo-빌드-및-스토어에-배포하는법) 기능을 소개할 것입니다.
-
-#### 레이아웃 디자인
+- JSX(레이아웃 디자인)
 
 ```react
 import * as React from 'react';
@@ -25,20 +21,20 @@ export default function App() {
 }
 ```
 
-React-Native의 레이아웃 디자인은 웹(HTML 과 CSS)의 작동원리와 거의 비슷합니다.  
-제가 React-Native의 레이아웃에 대해 아는 점은, 기본적인 웹 레이아웃에 flex 속성을 대폭 적용시켰다는 것입니다.
+React-Native의 레이아웃 디자인, JSX는 JavaScript + XML의 약어입니다. javascript 기반에 마크업(웹의 HTML 과 CSS의 작동원리와 거의 비슷합니다.)을 넣은 것입니다.  
+
+JSX에 대한 정확한 내용 공부는 [공식 홈페이지](https://ko.reactjs.org/docs/introducing-jsx.html)를 참고하거나 구글 검색으로 찾아보셔야 할 것 같습니다.
 
 
 
 ---
 
-글에서 나오는 모든 코드의 "..." 은 생략이라는 뜻입니다.
+* 유의사항
+  글에서 나오는 모든 코드의 "..." 은 생략이라는 뜻입니다.
 
 ```javascript
 ... // 생략이라는 의미
 ```
-
-
 
 ---
 
@@ -46,7 +42,7 @@ React-Native의 레이아웃 디자인은 웹(HTML 과 CSS)의 작동원리와 �
 
 ## 1. 개발환경 세팅
 
-* #### Node.js
+* ### Node.js
 
   react-native는 Javascript를 사용하기 때문에 먼저 Node.js를 설치해야 합니다. [Node.js 설치하기](https://nodejs.org/ko/)  
   제대로 설치 되어 환경변수까지 적용된 것을 확인하려면 터미널(윈도우는 cmd)에서 아래 명렁어를 쳐서 버전이 제대로 나오는지 확인하시면 됩니다.  
@@ -54,10 +50,8 @@ React-Native의 레이아웃 디자인은 웹(HTML 과 CSS)의 작동원리와 �
 ```shell
 npm -v
 ```
-// 들여쓰기 되도록 고쳐야할 듯	
-
 만약 작동하지 않는다면, Node.js를 설치하지 않으셨거나 Node.js에 대한 환경변수가 등록되지 않은 것 입니다.  
-	작동 안한다면 재설치 해보시고 그래도 안되시면 구글에 각 운영체제에 맞는 검색어로 찾아보시면 될 것 같습니다.    
+작동 안한다면 재설치 해보시고 그래도 안되시면 구글에 각 운영체제에 맞는 검색어로 찾아보시면 될 것 같습니다.    
 	ex. "윈도우 npm 환경변수", "macOS npm 환경변수"
 
 ![](./img/permission/macOS_permission.png "맥OS 권한 설정")
@@ -65,12 +59,12 @@ npm -v
 ​	앞으로 macOS 관련하여 권한 문제가 발생할 경우, macOS 환경설정의 보안 및 개인 정보 보호로 가셔서, 전체 디스크 접근 권한 등의 탭에서 오류와 관련된 프로그램 (ex. watchman)의 권한에 체크를 해주시면 됩니다.  
 구글에 관련 오류를 검색하셔서, 시도해보시는 것도 좋습니다.
 
-* #### Visual Studio Code
+* ### Visual Studio Code
 
   react-native(+expo)의 코드 작성은 Visual Studio Code로 하는 것이 일반적이고 효율적이므로 이것으로 사용해주시기 바랍니다. 참고로 MIT 라이센스이므로 걱정없이 사용하셔도 됩니다. [Visual Studio Code 설치하기](https://code.visualstudio.com/)
 
 
-* #### Expo 설치
+* ### Expo 설치
 
   기본적인 환경은 전부 갖춰져 있으니, 앞으로 [Expo 공식문서](https://docs.expo.io/)를 참고하여 환경을 세팅하시고 개발을 진행하시면 됩니다.  
   아래 명령어로 npm을 사용해 expo 를 설치해주시면 됩니다.
@@ -105,7 +99,7 @@ npm -v
 
 ## 2. Expo 개발 가이드
 
-#### **Expo 프로젝트 만들기**
+### **Expo 프로젝트 만들기**
 
 ```shell
 expo init example-app
@@ -135,7 +129,7 @@ expo start
 
 
 
-#### **기존 프로젝트 사용하기**
+### **기존 프로젝트 사용하기**
 
 새로운 expo 프로젝트를 만드는 것보다, 기존에 사용하던 프로젝트를 수정하여 사용하는 것이 덜 번거롭고 편할 것입니다.
 
@@ -155,7 +149,7 @@ yarn install
 
 
 
-#### **Expo 패키지(라이브러리) 설치 및 적용하는 법**
+### **Expo 패키지(라이브러리) 설치 및 적용하는 법**
 
 리액트 네이티브에서 사용할 수 있는 여러 패키지들은 쓸 수 없고 expo는 expo에서 제공하는 패키지만 사용가능합니다.  
 그러므로 expo로는  [Expo 공식문서](https://docs.expo.io/)에 있는 패키지만 사용할 수 있습니다.
@@ -209,7 +203,7 @@ openURL(webUrl);
 
 #### Expo의 각 파일들에 대한 설명
 
-* ##### App.js
+* #### App.js
 
   워크플로우 설명 ex. Dismount
 
@@ -270,7 +264,13 @@ openURL(webUrl);
 
   
 
-  아이콘 및 스플래시 이미지
+  
+
+  [app.json 파일에 대한 공식문서](https://docs.expo.io/versions/latest/config/app/)
+
+  
+
+  - 아이콘 및 스플래시 이미지
 
   
 
