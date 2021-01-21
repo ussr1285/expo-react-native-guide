@@ -4,9 +4,11 @@
 
 - Android와 iOS에서 모두 사용 가능합니다. (Web에서 빌드할 수 도 있습니다.)
 
-- 플레이스토어나 앱스토어를 통하지 않고 업데이트 가능합니다. 
+- OTA(Over The Arie) 업데이트 기능을 활용하여, 플레이스토어나 앱스토어를 통하지 않고 업데이트 가능합니다. 
 
-  하지만 개인적으로 권장하지 않습니다. 왜냐하면 스토어에서 앱 설치를한 신규 사용자에게도 업데이트를 필요로 하기 때문입니다.  (아래 [빌드에 대한 챕터]((#4-expo-빌드-및-스토어에-배포하는법))에서 release-channel 기능을 소개할 것입니다.)
+  하지만 개인적으로 이 업데이트에 관한 기능을 새로 만들 예정이 아니라면, 이것만을 사용해서 앱을 업데이트 하는 것을 권장하지 않습니다. 왜냐하면 스토어에서 앱 설치를 한 신규 사용자한테도 새로운 업데이트를 필요로 하기 때문입니다.  그러나 테스트용을 빌드 없이 확인하는 등, 적절히 사용하면 상당히 편리한 기능입니다.
+
+  (아래 [빌드에 대한 챕터]((#4-expo-빌드-및-스토어에-배포하는법))에서 release-channel 기능과 관련하여 어떻게 앱을 업데이트 할 것인지에 대해 소개할 것입니다.)
 
 - JSX(레이아웃 디자인)
 
@@ -99,7 +101,7 @@
 
   
 
-  - #### Expo 로그인
+* ### Expo 로그인
 
   빌드를 위해서는 expo에 로그인 해야 합니다.  
   빌드 뿐만 아니라 편의를 위해 아래 명령어로 expo에 미리 로그인 해두는 것을 권장합니다.
@@ -109,8 +111,6 @@
   ```
 
    [Expo 공식문서](https://docs.expo.io/)와 인터넷 검색을 통해 더 자세히 알아보실 수 있습니다.
-
-
 
 
 
@@ -244,13 +244,14 @@
         "version": "expo에서 표시할 앱의 버전",
         "orientation": "portrait",
         "icon": "./assets/아이콘으로 쓸 사진.png",
-        "splash": {
+        "splash": { // 앱이 켜질때 나오는 화면 설정
           "image": "./assets/스플래시 이미지로 쓸 사진.png",
           "resizeMode": "contain",
-          "backgroundColor": "#FFF100"
+          "backgroundColor": "스플래시 화면일때 앱" //  (ex. #FFF100)
         },
-        "updates": {
+        "updates": { // Expo OTA 업데이트 관련(스토어에 업로드 하는 것이 아닌, Over The Air(OTA)업데이트로 재설치 없이 업데이트 되는 것에 관한 설정임. )
           "fallbackToCacheTimeout": 0
+          //, "enabled": false 를 추가하면 OTA 업데이트 비활성화.
         },
         "assetBundlePatterns": [
           "assets/*"
@@ -258,7 +259,7 @@
         "ios": {
           "bundleIdentifier": "com.회사명.플랫폼이름", // ios 에서의 빌드 id
           "supportsTablet": true,
-          "buildNumber": "ios에서의 앱 버전",
+          "buildNumber": "ios에서의 앱 버전", // ios에서 표시할 버전, 스토어에 업로드할 때 이전 버전보다 높아야함.
           "infoPlist": { // 권한 요청시 필요한 
             ... 
           }
@@ -272,7 +273,7 @@
         },
         "notification": {
           "icon": "./assets/앱에 알림왔을때 띄어줄 앱의 아이콘",
-          "color": "배경화면 색 RGB 코드", // #FFFFFF
+          "color": "알림 배너의 배경 색 RGB 코드", // 알림 배너의 배경색 (ex. #FFFFFF)
           "iosDisplayInForeground": true
         }
       }
@@ -290,7 +291,17 @@
 
 ## 3. Expo앱 기능들 (모듈)
 
+- ### 위치
 
+  [라이브러리 설치하는 법]((#)
+
+  
+
+- ### 푸시
+
+- ### 웹뷰
+
+- 
 
 ( [Expo앱 모듈](./module.md) 새로 만들어야 함. )
 
@@ -300,6 +311,18 @@
 
 ### Android (안드로이드)
 
+\
+
+테스트용 apk 빌드
+
+```shell
+expo build:android --release-channel test-android
+```
+
+
+
+스토어 배포용 apk 빌드
+
 ```sh
 expo build:android --release-channel play-store
 ```
@@ -308,7 +331,19 @@ expo build:android --release-channel play-store
 
 --release-channel은 
 
+
+
 ### iOS (아이폰)
+
+테스트용 IPA 파일 빌드
+
+```shell
+sudo expo build:ios --release-channel app-store
+```
+
+
+
+스토어 배포용 IPA 빌드
 
 ```shell
 sudo expo build:ios --release-channel app-store
