@@ -12,7 +12,7 @@
 
 - JSX(레이아웃 디자인)
 
-  ```javascript
+  ```react
   import * as React from 'react';
   import { Text, View } from 'react-native';
   
@@ -293,15 +293,84 @@
 
 - ### 위치
 
-  [라이브러리 설치하는 법]((#)
+  ```shell
+  expo install expo-location
+  ```
+
+  먼저 위 명령어로 "expo-location"을 설치해주셔야 합니다. 
+
+  아래 주석을 달아놓긴 했지만, 정확한 사용법을 알고싶다면 [공식문서](https://docs.expo.io/versions/latest/sdk/location/)를 참고하는 것을 권장드립니다.
+
+  
+
+  - 위치 권한 받아오는
+
+  ```react
+  import * as Location from 'expo-location';
+  ...
+  
+  constructor(props) {
+      super(props);
+      this.state = {
+          ....
+          posx: null,
+          posy: null
+      };
+  }
+  ...
+  
+  componentDidMount(){
+      this.requestLocationPermission(); // 위치 권한 받아오기
+      this.getLocation(); // 위치 정보 받아오기
+  }
+  ...
+  
+  requestLocationPermission = async () => { // 위치 권한 받아오는 함수.
+      try {
+          const { status } = await Permissions.getAsync(Permissions.LOCATION); // 위치 권한 승인 유무를 status에 저장.
+          if (status !== "granted") { // 위치 권한이 없다면
+              await Location.requestPermissionsAsync(); // 위치 권한 요청함.
+          }
+      } catch (error) { }
+  }
+  ...
+  
+  // 위치를 받아오는 함수
+  getLocation = async () => {
+      try {
+          const {
+              coords: { latitude, longitude }
+          } = await Location.getCurrentPositionAsync(
+              {
+                  accuracy: Location.Accuracy.BestForNavigation,
+                  maximumAge: 1000,
+                  timeout: 5000
+              }
+          );
+          //console.log(latitude, longitude); // 위치를 제대로 가져오는지 확인할 때 쓰면 좋습니다.
+          this.setState({
+              posx: latitude,
+              posy: longitude,
+              isLoading: false
+          });
+      } catch (error) {
+          console.log("getLocation 함수에서 오류 발생함.");
+      }
+  }
+  
+  ```
+
+  
 
   
 
 - ### 푸시
 
+  
+
 - ### 웹뷰
 
-- 
+  
 
 ( [Expo앱 모듈](./module.md) 새로 만들어야 함. )
 
