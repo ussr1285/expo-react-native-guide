@@ -2,6 +2,8 @@
 
 ## Expo(React-Native)의 특징
 
+
+
 - Android와 iOS에서 모두 사용 가능합니다. (Web에서 빌드할 수 도 있습니다.)
 
 - OTA(Over The Arie) 업데이트 기능을 활용하여, 플레이스토어나 앱스토어를 통하지 않고 업데이트 가능합니다. 
@@ -29,19 +31,35 @@
 
   JSX에 대한 정확한 내용 공부는 [공식 홈페이지](https://ko.reactjs.org/docs/introducing-jsx.html)를 참고하거나 구글 검색으로 찾아보셔야 할 것 같습니다.
 
-  
+- 플러터 Vs 리액트 네이티브
+
+  플러터가 기존의 앱 개발자에게 친숙하다면, 리액트 네이티브는 웹 개발자에게 친숙한 느낌이 아닐까라는 생각이 듭니다. 그래도 플러터가 2.0까지 출시하고, 또 모바일 어플리케이션 뿐만 아니라 데스크탑 어플리케이션, 웹 어플리케이션을 만들 수 있는 것을 생각하면 개인적으로 플러터를 하는 것이 이익이 클 것 같습니다. 
 
 ---
 
-* 유의사항
 
-  ```javascript
-  ... // 생략이라는 의미
-  ```
 
-  글에서 나오는 모든 코드의 "..." 은 생략이라는 뜻입니다.
+#### 유의사항
+
+- 이 글은 아마추어가 쓴 글이라 글 내용에 오류가 많을 수도 있다는 점 주의 바랍니다.
+
+- 글에서 나오는 모든 코드 블럭의 "..." 은 생략이라는 뜻입니다.
+
+```javascript
+... // 생략이라는 의미
+```
+
+
 
 ---
+
+
+
+## 0. 개발환경 세팅이 귀찮다면
+
+
+
+https://snack.expo.io/
 
 
 
@@ -96,7 +114,12 @@
   expo --version
   ```
 
-  테스트를 위해 폰으로 [안드로이드 플레이스토어](https://play.google.com/store/apps/details?id=host.exp.exponent)나 [iOS 앱스토어](https://itunes.com/apps/exponent) 에서 expo라 검색하셔서 설치하시면 됩니다.  
+  
+
+  - 테스트를 위해 폰으로 [안드로이드 플레이스토어](https://play.google.com/store/apps/details?id=host.exp.exponent)나 [iOS 앱스토어](https://itunes.com/apps/exponent) 에서 expo라고 검색하셔서 나오는 걸 설치하시면 됩니다.  <img src="./img/playstore_expo.jpeg" alt="playstore_expo" style="zoom:40%;" />
+
+  
+
   [참고한 문서](https://docs.expo.io/get-started/installation/)
 
   
@@ -104,7 +127,7 @@
 * ### Expo 로그인
 
   빌드를 위해서는 expo에 로그인 해야 합니다.  
-  빌드 뿐만 아니라 편의를 위해 아래 명령어로 expo에 미리 로그인 해두는 것을 권장합니다.
+  빌드 뿐만 아니라 여러 expo의 기능을 사용하기 위해, 아래 명령어로 expo에 미리 로그인 해두는 것을 권장합니다.
 
   ```shell
   expo login
