@@ -452,25 +452,30 @@ ios를 빌드할때는 sudo를 사용하여 관리자 권한으로 접근하여�
 
 ## 6. 기타
 
-1. ##### Git & GitHub 활용
+1. **강의 추천**
 
-   [GitHub Desktop](https://desktop.github.com/) 을 활용해서 버전관리 및 백업하며 개발하시는 것을 추천합니다.  
-   버전 관리, 협업, 백업, 공유 등을 할때 유용합니다.   
-   기능 전부를 활용할 필요는 없고, commit과 push만 활용해도 좋을 것 같습니다.  
-   [생활코딩 버전관리 강의](https://opentutorials.org/course/301) 를 참고하여 알아보시는 것 추천합니다.  
-   
+   [양재동 코드랩 리액트 네이티브 강의](https://youtu.be/9xzmAXbesaY)
 
    
 
-2. ##### 깃허브 마크다운 문서 작성 방법 참고
+2. **Git & GitHub 활용**
 
-   (한글) https://gist.github.com/ihoneymon/652be052a0727ad59601  
-   (영문) https://guides.github.com/features/mastering-markdown/  
-   **typora** 란 프로그램 사용하셔서 마크다운 수정하시면 편합니다.  (이 프로그램 사용할시 띄어쓰기는 shift + Enter)
+[GitHub Desktop](https://desktop.github.com/) 을 활용해서 버전관리 및 백업하며 개발하시는 것을 추천합니다.  
+버전 관리, 협업, 백업, 공유 등을 할때 유용합니다.   
+기능 전부를 활용할 필요는 없고, commit과 push만 활용해도 좋을 것 같습니다.  
+[생활코딩 버전관리 강의](https://opentutorials.org/course/301) 를 참고하여 알아보시는 것 추천합니다.  
 
-   
 
-3. ##### Expo 개발 웹 IDE, Snack
 
-   Expo 관련하여 구글링 하다가 보면 
+3. **깃허브 마크다운 문서 작성 방법 참고**
+
+(한글) https://gist.github.com/ihoneymon/652be052a0727ad59601  
+(영문) https://guides.github.com/features/mastering-markdown/  
+**typora** 란 프로그램 사용하셔서 마크다운 수정하시면 편합니다.  (이 프로그램 사용할시 띄어쓰기는 shift + Enter)
+
+
+
+4. **Expo 개발 웹 IDE, Snack**
+
+Expo 관련하여 구글링 하다가 보면 
 
