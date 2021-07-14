@@ -43,6 +43,12 @@ expo install
 
 
 
+## expo 명령어 모음
+
+- [이 사이트](https://docs.expo.io/workflow/expo-cli/)에 모든 명령어 설명이 있음(영문).
+
+
+
 ### [중요] 앱 출시를 위한 앱 빌드 및 apk & 앱번들(안드로이드), IPA(iOS) 파일 생성.
 
 - 안드로이드 apk 파일 및 app-bundle 빌드
@@ -89,7 +95,7 @@ expo install
 
 
 
-**테스트**용 앱을 설치하기 위해서는, 안드로이드의 경우 [expo 사이트](https://expo.io/)에 로그인하여 빌드된 apk 파일을 다운받아 그냥 설치하면 되고, iOS의 경우 App Store에 IPA 파일을 [Transporter](https://apps.apple.com/kr/app/transporter/id1450874784?mt=12)를 사용하여 올려 테스트 플라이트[(TestFlight)](https://developer.apple.com/kr/testflight/) 를 활용하면 된다. 
+**테스트**용 앱을 설치하기 위해서는, 안드로이드의 경우 [expo 사이트](https://expo.io/)에 로그인하여 빌드된 apk 파일을 다운받아 그냥 설치하면 되고, iOS의 경우 [App Store Connect](https://appstoreconnect.apple.com/)에 IPA 파일을 [Transporter](https://apps.apple.com/kr/app/transporter/id1450874784?mt=12)를 사용하여 올려 테스트 플라이트[(TestFlight)](https://developer.apple.com/kr/testflight/) 를 활용하면 된다. 
 
 
 
