@@ -31,6 +31,10 @@
 
   JSX에 대한 정확한 내용 공부는 [공식 홈페이지](https://ko.reactjs.org/docs/introducing-jsx.html)를 참고하거나 구글 검색으로 찾아보셔야 할 것 같습니다.
 
+- 클래스형 컴포넌트 Vs 함수형 컴포넌트 (React, React-Native도 마찬가지)
+  기존에는 클래스형 컴포넌트를 활용하여 개발하였으나, 클래스형 컴포넌트에 대한 한계와 불편한 점이 생기게 되었고, 함수형 컴포넌트라는 개념 중심으로 리액트가 전환하고 있다.
+  - 기존 클래스형 컴포넌트에서는 this.state~ 나 componentDidMount 등의 상태 관리와 라이프 사이클이 존재했으나, 현재 쓰이는 함수형 컴포넌트는 [hook이라는 개념과 useEffect](https://ko.reactjs.org/docs/hooks-intro.html)라는 개념으로 대체되어 사용된다.
+
 
 ---
 
@@ -325,59 +329,6 @@ https://snack.expo.io/
 
   - 위치 권한 받아오는
 
-  ```react
-  import * as Location from 'expo-location';
-  ...
-  
-  constructor(props) {
-      super(props);
-      this.state = {
-          ....
-          posx: null,
-          posy: null
-      };
-  }
-  ...
-  
-  componentDidMount(){
-      this.requestLocationPermission(); // 위치 권한 받아오기
-      this.getLocation(); // 위치 정보 받아오기
-  }
-  ...
-  
-  requestLocationPermission = async () => { // 위치 권한 받아오는 함수.
-      try {
-          const { status } = await Permissions.getAsync(Permissions.LOCATION); // 위치 권한 승인 유무를 status에 저장.
-          if (status !== "granted") { // 위치 권한이 없다면
-              await Location.requestPermissionsAsync(); // 위치 권한 요청함.
-          }
-      } catch (error) { }
-  }
-  ...
-  
-  // 위치를 받아오는 함수
-  getLocation = async () => {
-      try {
-          const {
-              coords: { latitude, longitude }
-          } = await Location.getCurrentPositionAsync(
-              {
-                  accuracy: Location.Accuracy.BestForNavigation,
-                  maximumAge: 1000,
-                  timeout: 5000
-              }
-          );
-          //console.log(latitude, longitude); // 위치를 제대로 가져오는지 확인할 때 쓰면 좋습니다.
-          this.setState({
-              posx: latitude,
-              posy: longitude,
-              isLoading: false
-          });
-      } catch (error) {
-          console.log("getLocation 함수에서 오류 발생함.");
-      }
-  }
-  
   ```
 
   
@@ -453,7 +404,13 @@ ios를 빌드할때는 sudo를 사용하여 관리자 권한으로 접근하여�
   이후 npm install을 사용해 npm 관련 패키지들을 설치하여 주면 된다.
 
 
+
+
+
+
 ## 7. 기타
+
+0. **[명령어 모음집](https://github.com/ussr1285/expo-react-native-guide/blob/master/expo%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EB%AA%A8%EC%9D%8C.md)**
 
 1. **강의 추천**
 
